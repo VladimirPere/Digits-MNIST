@@ -13,17 +13,10 @@ target = torch.tensor(target.values, dtype=torch.int64)
 training_data = data.drop(columns=[target_name])
 training_data = torch.tensor(training_data.values, dtype=torch.float32)
 
-
-# Graded by accuracy(.97=97% correct) - neg_mean_square_error
-# Columns = pixel_names (0-783), rows = samples (42_000)
-# Must use pytorch
-# Split data with sklearn
-
 train_data, test_data, train_target, test_target = train_test_split(training_data, target, random_state=4, test_size=.3)
 
 # Variables for training data
 learning_rate = 1e-3
-# Oscillating outputs after 5 epoches, learning rate scheduler may be better
 epochs = 10
 batch_size = 128
 
@@ -54,8 +47,7 @@ class NeuralNetwork(nn.Module):
 model = NeuralNetwork()
 
 def train_loop(dataloader, model, loss_fn, optimizer):
-    # Set the model to training mode - important for batch normalization and dropout layers
-    # Unnecessary in this situation but added for best practices
+    # Set the model to training mode
     model.train()
     for X, y in dataloader:
         # Compute prediction and loss
@@ -68,22 +60,20 @@ def train_loop(dataloader, model, loss_fn, optimizer):
         optimizer.step()
 
 def test_loop(dataloader, model, loss_fn):
-    # Set the model to evaluation mode - important for batch normalization and dropout layers
-    # Unnecessary in this situation but added for best practices
+    # Set the model to evaluation mode
     model.eval()
     size = len(dataloader.dataset)
     num_batches = len(dataloader)
     test_loss, correct = 0, 0
 
-    # Evaluating the model with torch.no_grad() ensures that no gradients are computed during test mode
-    # also serves to reduce unnecessary gradient computations and memory usage for tensors with requires_grad=True
+    # Evaluating the model with torch.no_grad()
     with torch.no_grad():
         for X, y in dataloader:
             pred = model(X)
             test_loss += loss_fn(pred, y).item()
             correct += (pred.argmax(1) == y).type(torch.float).sum().item()
 
-
+    # Finding Accuracy
     test_loss /= num_batches
     correct /= size
     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
