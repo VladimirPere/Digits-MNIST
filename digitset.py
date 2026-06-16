@@ -94,7 +94,7 @@ for t in range(epochs):
 print("Done!")
 
 
-        # OUTPUTS
+# OUTPUTS
 # Epoch 1
 # -------------------------------
 # Test Error: 
