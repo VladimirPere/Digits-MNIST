@@ -40,10 +40,10 @@ The Conv2D model shows a better accuracy over the Linear model per epoch. Conv2D
 
 
 <p align="center">
-  | Model     | Best Accuracy | Training Time | Epochs to 97% |
-  |-----------|---------------|---------------|---------------|
-  | Linear NN | 98.0%         | 34.1s         | ~11           |
-  | Conv2D    | 99.0%         | 100.2s        | ~6            | <br>
+  | Model     | Best Accuracy | Training Time | Epochs to 97% |<br>
+  |-----------|---------------|---------------|---------------|<br>
+  | Linear NN | 98.0%         | 34.1s         | ~11           |<br>
+  | Conv2D    | 99.0%         | 100.2s        | ~6            |<br>
   Figure 2. Table comparing accuracy, time, and epochs to 97% of both models.
 </p>
 
