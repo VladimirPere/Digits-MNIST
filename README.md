@@ -39,13 +39,12 @@ matplotlib, numpy, pandas, pytorch, scikit-learn
 The Conv2D model shows a better accuracy over the Linear model per epoch. Conv2D also shows a higher max accuracy of 99.0%, 1 percentage point higher than the Linear model's 98.0%.
 
 
-<p align="center">
-  | Model     | Best Accuracy | Training Time | Epochs to 97% |<br>
-  |-----------|---------------|---------------|---------------|<br>
-  | Linear NN | 98.0%         | 34.1s         | ~11           |<br>
-  | Conv2D    | 99.0%         | 100.2s        | ~6            |<br>
-  Figure 2. Table comparing accuracy, time, and epochs to 97% of both models.
-</p>
+| Model     | Best Accuracy | Training Time | Epochs to 97% |
+|-----------|---------------|---------------|---------------|
+| Linear NN | 98.0%         | 34.1s         | ~11           |
+| Conv2D    | 99.0%         | 100.2s        | ~6            |
+
+*Figure 2. Table comparing accuracy, time, and epochs to 97% of both models.
 
 Conv2D also converges faster — reaching 97% accuracy by epoch 6 versus epoch 11 for Linear, suggesting convolutional layers extract 
 spatial features more efficiently than fully connected layers on image data.
@@ -56,10 +55,10 @@ However, the Conv2D model takes almost 3 times as long. While Conv2D is more acc
 ### Conv2D
 - Slower model more fit for understanding images
 - Much more accurate for understanding 2d images
-- more likely to be used in services that require high accuracy or cannot afford to be wrong: security systems, autonomous vehicles, and healthcare.
+- More likely to be used in services that require high accuracy or cannot afford to be wrong: security systems, autonomous vehicles, and healthcare.
 ### Linear
 - Faster than Conv2D counterpart, but less reliable in understanding images
-- More likely to be used in services that require quick but less accurate data like: retail check-out, phone facial recognition, and social media recommendations.
+- More likely to be used in services that require quick but less accurate data like: retail check-out, quick barcode scanning, and social media recommendations.
 
 ## Future work and Limitations
 - Only 2 hidden layers of 512 node used for linear model due to memory and cpu limitations. More nodes or layers may increase accuracy
