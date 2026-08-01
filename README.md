@@ -1,8 +1,6 @@
 # Comparing Difference Between Linear and Conv2D Neural Networks of digitsMNIST
 
 ## Context
- "MNIST Digit Recognizer" by ANIMATRONBOT
-
 Data found on KaggleHub: "MNIST Digit Recognizer" by ANIMATRONBOT. Found Here: https://www.kaggle.com/datasets/animatronbot/mnist-digit-recognizer
 
 Supervised learning of 42,000 samples of 784 features. Features are pixels in a 28x28 grid that make a black and white image of a digit (0-9).
