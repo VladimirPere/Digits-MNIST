@@ -37,7 +37,7 @@ matplotlib, numpy, pandas, pytorch, scikit-learn
 The Conv2D model shows a better accuracy over the Linear model per epoch. Conv2D also shows a higher max accuracy of 99.0%, 1 percentage point higher than the Linear model's 98.0%.
 
 
-| Model     | Best Accuracy | Training Time | Epochs to 97% |
+| Model     | Best Accuracy | Training Time | Epochs to 97.5% |
 |-----------|---------------|---------------|---------------|
 | Linear NN | 98.0%         | 34.1s         | ~11           |
 | Conv2D    | 99.0%         | 100.2s        | ~6            |
