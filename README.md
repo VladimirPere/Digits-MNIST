@@ -39,12 +39,12 @@ The Conv2D model shows a better accuracy over the Linear model per epoch. Conv2D
 
 | Model     | Best Accuracy | Training Time | Epochs to 97.5% |
 |-----------|---------------|---------------|---------------|
-| Linear NN | 98.0%         | 34.1s         | ~11           |
+| Linear NN | 98.0%         | 34.1s         | ~10           |
 | Conv2D    | 99.0%         | 100.2s        | ~1            |
 
 *Figure 2. Table comparing accuracy, time, and epochs to 97% of both models.
 
-Conv2D also converges faster — reaching 97% accuracy by epoch 6 versus epoch 11 for Linear, suggesting convolutional layers extract 
+Conv2D also converges faster — reaching 97% accuracy by epoch 1 versus epoch 10 for Linear, suggesting convolutional layers extract 
 spatial features more efficiently than fully connected layers on image data.
 
 However, the Conv2D model takes almost 3 times as long. While Conv2D is more accurate, more time is required for that accuracy.
